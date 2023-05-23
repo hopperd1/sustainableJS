@@ -1,0 +1,50 @@
+{
+  "name": "sustainable-electronjs",
+  "displayName": "sustainable-electronjs",
+  "description": "Encouraging more environmentally sustainable electronjs development",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sustainable-electronjs.highlightLargeDependencies",
+        "title": "Highlight Large NPM Dependencies"
+      },
+      {
+        "command": "sustainable-electronjs.openWiki",
+        "title": "Open Wiki"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "dependencies": {
+    "npm-api": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0"
+  }
+}
