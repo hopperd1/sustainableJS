@@ -10,6 +10,6 @@ Additional commands are automatically enabled in .js files
 
 ## Known Issues
 
-There may be a problem launching the wiki in the external browser - unfortunatly if you have this issue you'll have to access the info page manually.
+There may be a problem launching the wiki in the external browser - unfortunately if you have this issue you'll have to access the info page manually.
 
 **Enjoy!**
